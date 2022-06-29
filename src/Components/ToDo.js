@@ -1,13 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "../Styled/styledToDo.css";
+import { addToDo } from "../lib/api";
 
 const CreateToDo = () => {
   const [toDo, setToDo] = useState("");
-  const uploadToDo = (event) => {
+
+  const uploadToDo = async (event) => {
     event.preventDefault();
+    await addToDo(toDo);
     setToDo("");
-    console.log(toDo);
   };
 
   return (
@@ -16,6 +18,7 @@ const CreateToDo = () => {
         type="text"
         name="text"
         value={toDo}
+        placeholder="to do..."
         onChange={(e) => setToDo(e.target.value)}
       />
       <button className="addToDoButton">add</button>

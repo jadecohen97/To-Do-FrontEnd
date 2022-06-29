@@ -1,11 +1,13 @@
 import "./App.css";
 import React, { useState } from "react";
-import Index from "./Components/index";
+import CreateToDo from "./Components/ToDo";
+import ToDoList from "./Components/toDoList";
 
 function App() {
   return (
     <div className="App">
-      <Index />
+      <CreateToDo />
+      <ToDoList />
     </div>
   );
 }
