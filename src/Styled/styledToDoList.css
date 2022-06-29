@@ -67,3 +67,6 @@
 .disabledButton:hover {
   background-color: grey;
 }
+.refresh {
+  margin-bottom: 15px;
+}

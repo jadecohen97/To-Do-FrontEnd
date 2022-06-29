@@ -42,7 +42,7 @@ const ToDoList = () => {
 
   return (
     <div className="listWrapper">
-      <button onClick={handleRefresh} className="listButton">
+      <button onClick={handleRefresh} className="listButton refresh" >
         refresh
       </button>
       <div className="listContainer">
